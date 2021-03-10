@@ -12,7 +12,7 @@ namespace kuku.View
 {
     public class Notebook_comand
     {
-        public void Create(TextBox sender  )
+        public void Create(TextBox sender)
         {
             TextBox textBox = sender;
             if (textBox.Text != "")
@@ -38,7 +38,28 @@ namespace kuku.View
             else
                 textBox.Text = "";
         }
-        public void Open(TextBox sender  )
+
+        public void Select_all(TextBox sender)
+        {
+            sender.SelectionStart = 0;
+            sender.SelectionLength = sender.Text.Length;
+            sender.Focus();
+        }
+
+        public void Data_time(TextBox sender) => sender.Paste(DateTime.Now.ToString());
+
+
+        public void Params() => MessageBox.Show("Мы типа задали параметры", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        public void Print()
+        {
+            PrintDialog dialog = new PrintDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("Мы типа распечатали", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void Open(TextBox sender)
         {
 
             if (sender.Text != "")
@@ -76,7 +97,7 @@ namespace kuku.View
                 }
             }
         }
-        public void Save(TextBox sender )
+        public void Save(TextBox sender)
         {
 
             if (Model_notebook.path == "")
@@ -92,7 +113,7 @@ namespace kuku.View
             else
                 File.WriteAllText(Model_notebook.path, sender.Text);
         }
-        public void SaveAs(TextBox sender )
+        public void SaveAs(TextBox sender)
         {
 
             SaveFileDialog dialog = new SaveFileDialog();
@@ -104,9 +125,21 @@ namespace kuku.View
             }
         }
         public void NewWindow() => new Form1().Show();
-        public void Undo(TextBox sender  ) => sender.Undo();
-        public void Cut(TextBox sender ) => sender.Cut();
-        public void Copy(TextBox sender ) => sender.Copy();
-        public void Paste(TextBox sender ) => sender.Paste();
+        public void Undo(TextBox sender) => sender.Undo();
+        public void Cut(TextBox sender) => sender.Cut();
+        public void Copy(TextBox sender) => sender.Copy();
+        public void Paste(TextBox sender) => sender.Paste();
+        public void Del()
+        {
+            if (Model_notebook.path != "")
+            {
+                File.Delete(Model_notebook.path);
+                Model_notebook.path = "";
+                MessageBox.Show("Сохранение удален", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+                MessageBox.Show("У нас еще не выбран фаил", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
     }
 }

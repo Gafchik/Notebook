@@ -42,6 +42,7 @@ namespace kuku
                 PasteToolStripMenuItem.Enabled = true;
                 CutToolStripMenuItem.Enabled = true;
             }
+            
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)=> textBox.Size = new Size(this.Size.Width, this.Size.Height);
@@ -54,6 +55,19 @@ namespace kuku
         private void CutToolStripMenuItem_Click(object sender, EventArgs e) => control.Cut(textBox);
         private void CopyToolStripMenuItem_Click(object sender, EventArgs e) => control.Copy(textBox);
         private void PasteToolStripMenuItem_Click(object sender, EventArgs e) => control.Paste(textBox);
+        private void delToolStripMenuItem_Click(object sender, EventArgs e) => control.Del();
+        private void PrintToolStripMenuItem_Click(object sender, EventArgs e) => control.Print();
+        private void ParamsToolStripMenuItem_Click(object sender, EventArgs e) => control.Params();
+        private void select_all_ToolStripMenuItem_Click(object sender, EventArgs e) => control.Select_all(textBox);
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            control.Save(textBox);
+            this.Close();
+            GC.Collect(GC.GetGeneration(this));
+        }
+        private void Data_timeToolStripMenuItem_Click(object sender, EventArgs e) => control.Data_time(textBox);
+
+        
     }
 }
 

@@ -29,5 +29,16 @@ namespace kuku
         public void Copy(TextBox sender) => comand.Copy(sender);
         public void Paste(TextBox sender) => comand.Paste(sender);
 
+        public void Del() => comand.Del();
+
+        public void Print( ) => comand.Print();
+
+        public void Params() => comand.Params();
+
+        public void Select_all(TextBox sender) => comand.Select_all(sender);
+
+        public void Data_time(TextBox sender) => comand.Data_time(sender);
+
+
     }
 }
