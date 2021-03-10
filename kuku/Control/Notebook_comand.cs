@@ -46,6 +46,19 @@ namespace kuku.View
             sender.Focus();
         }
 
+        internal void find(TextBox sender)
+        {
+            Find_form f =new Find_form();
+            f.ShowDialog();
+            if (Model_notebook.finder != "")
+            {
+                int i = sender.Text.IndexOf(Model_notebook.finder);
+                sender.SelectionStart = i;
+                sender.SelectionLength = sender.Text.Length;
+                sender.Focus();
+            }
+        }
+
         public void Data_time(TextBox sender) => sender.Paste(DateTime.Now.ToString());
 
 

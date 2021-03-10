@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kuku.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +43,7 @@ namespace kuku
                 PasteToolStripMenuItem.Enabled = true;
                 CutToolStripMenuItem.Enabled = true;
             }
-            
+            Model_notebook.text = (sender as TextBox).Text;
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)=> textBox.Size = new Size(this.Size.Width, this.Size.Height);
@@ -66,6 +67,7 @@ namespace kuku
             GC.Collect(GC.GetGeneration(this));
         }
         private void Data_timeToolStripMenuItem_Click(object sender, EventArgs e) => control.Data_time(textBox);
+        private void findToolStripMenuItem_Click(object sender, EventArgs e) => control.find(textBox);
 
         
     }

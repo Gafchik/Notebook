@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Control\Control_notebook.cs" />
     <Compile Include="Model\Model_notebook.cs" />
+    <Compile Include="View\Find_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Find_form.Designer.cs">
+      <DependentUpon>Find_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Control\Notebook_comand.cs" />
+    <EmbeddedResource Include="View\Find_form.resx">
+      <DependentUpon>Find_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

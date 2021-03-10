@@ -39,6 +39,7 @@ namespace kuku
 
         public void Data_time(TextBox sender) => comand.Data_time(sender);
 
+        internal void find(TextBox sender)=> comand.find(sender);
 
     }
 }
