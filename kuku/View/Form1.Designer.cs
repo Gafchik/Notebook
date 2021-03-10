@@ -105,7 +105,7 @@
             // 
             this.CreateToolStripMenuItem.Name = "CreateToolStripMenuItem";
             this.CreateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.CreateToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.CreateToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.CreateToolStripMenuItem.Text = "Создать";
             this.CreateToolStripMenuItem.Click += new System.EventHandler(this.CreateToolStripMenuItem_Click);
             // 
@@ -114,7 +114,7 @@
             this.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem";
             this.NewWindowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.N)));
-            this.NewWindowToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.NewWindowToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.NewWindowToolStripMenuItem.Text = "Новое окно";
             this.NewWindowToolStripMenuItem.Click += new System.EventHandler(this.NewWindowToolStripMenuItem_Click);
             // 
@@ -122,7 +122,7 @@
             // 
             this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
             this.OpenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.OpenToolStripMenuItem.Text = "Открыть";
             this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -130,7 +130,7 @@
             // 
             this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
             this.SaveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.SaveToolStripMenuItem.Text = "Сохранить";
             this.SaveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -139,37 +139,37 @@
             this.SaveAsКакToolStripMenuItem.Name = "SaveAsКакToolStripMenuItem";
             this.SaveAsКакToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.SaveAsКакToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.SaveAsКакToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.SaveAsКакToolStripMenuItem.Text = "Сохранить как...";
             this.SaveAsКакToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(232, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(231, 6);
             // 
             // ParamsToolStripMenuItem
             // 
             this.ParamsToolStripMenuItem.Name = "ParamsToolStripMenuItem";
-            this.ParamsToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.ParamsToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.ParamsToolStripMenuItem.Text = "Параметры страницы";
             // 
             // PrintToolStripMenuItem
             // 
             this.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem";
             this.PrintToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.PrintToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.PrintToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.PrintToolStripMenuItem.Text = "Печать...";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(232, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(231, 6);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.ExitToolStripMenuItem.Text = "Выход";
             // 
             // правкаToolStripMenuItem
@@ -243,7 +243,6 @@
             this.delToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
             this.delToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.delToolStripMenuItem.Text = "Удалить";
-
             // 
             // toolStripSeparator4
             // 
@@ -341,6 +340,7 @@
             this.textBox.Location = new System.Drawing.Point(0, 27);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
+            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox.Size = new System.Drawing.Size(800, 421);
             this.textBox.TabIndex = 1;
             // 
@@ -353,40 +353,40 @@
             this.ContextSaveToolStripMenuItem,
             this.ContextSaveAs});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(154, 114);
             // 
             // ContextCreatrToolStripMenuItem
             // 
             this.ContextCreatrToolStripMenuItem.Name = "ContextCreatrToolStripMenuItem";
-            this.ContextCreatrToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.ContextCreatrToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.ContextCreatrToolStripMenuItem.Text = "Создать";
             this.ContextCreatrToolStripMenuItem.Click += new System.EventHandler(this.CreateToolStripMenuItem_Click);
             // 
             // ContextNewToolStripMenuItem
             // 
             this.ContextNewToolStripMenuItem.Name = "ContextNewToolStripMenuItem";
-            this.ContextNewToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.ContextNewToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.ContextNewToolStripMenuItem.Text = "Новое окно";
             this.ContextNewToolStripMenuItem.Click += new System.EventHandler(this.NewWindowToolStripMenuItem_Click);
             // 
             // ContextOpenToolStripMenuItem
             // 
             this.ContextOpenToolStripMenuItem.Name = "ContextOpenToolStripMenuItem";
-            this.ContextOpenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.ContextOpenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.ContextOpenToolStripMenuItem.Text = "Открыть";
             this.ContextOpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // ContextSaveToolStripMenuItem
             // 
             this.ContextSaveToolStripMenuItem.Name = "ContextSaveToolStripMenuItem";
-            this.ContextSaveToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.ContextSaveToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.ContextSaveToolStripMenuItem.Text = "Сохранить";
             this.ContextSaveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // ContextSaveAs
             // 
             this.ContextSaveAs.Name = "ContextSaveAs";
-            this.ContextSaveAs.Size = new System.Drawing.Size(154, 22);
+            this.ContextSaveAs.Size = new System.Drawing.Size(153, 22);
             this.ContextSaveAs.Text = "Сохранить как";
             this.ContextSaveAs.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 

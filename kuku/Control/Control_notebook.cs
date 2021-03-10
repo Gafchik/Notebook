@@ -7,20 +7,27 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using kuku.Model;
 using kuku.View;
 
 namespace kuku
 {
     public class Control_notebook
     {
-        Model_notebook model;
+
         Notebook_comand comand;
         public Control_notebook()
         {
-            model = new Model_notebook();
             comand = new Notebook_comand();
         }
+        public void Create(TextBox sender) => comand.Create(sender);
+        public void Open(TextBox sender) => comand.Open(sender);
+        public void Save(TextBox sender) => comand.Save(sender);
+        public void SaveAs(TextBox sender) => comand.SaveAs(sender);
+        public void NewWindow() => comand.NewWindow();
+        public void Undo(TextBox sender) => comand.Undo(sender);
+        public void Cut(TextBox sender) => comand.Cut(sender);
+        public void Copy(TextBox sender) => comand.Copy(sender);
+        public void Paste(TextBox sender) => comand.Paste(sender);
 
     }
 }

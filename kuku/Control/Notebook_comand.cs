@@ -1,4 +1,4 @@
-﻿using kuku.Model;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using kuku.Model;
 
 namespace kuku.View
 {
-   public class Notebook_comand
+    public class Notebook_comand
     {
-        public void Create(ref TextBox sender, Model_notebook model)
+        public void Create(TextBox sender  )
         {
             TextBox textBox = sender;
             if (textBox.Text != "")
@@ -25,8 +26,8 @@ namespace kuku.View
 
                     if (dialog.ShowDialog() == DialogResult.OK)
                     {
-                        model.path = dialog.FileName;
-                        File.WriteAllText(model.path, textBox.Text);
+                        Model_notebook.path = dialog.FileName;
+                        File.WriteAllText(Model_notebook.path, textBox.Text);
                     }
                     else
                         textBox.Text = "";
@@ -37,7 +38,7 @@ namespace kuku.View
             else
                 textBox.Text = "";
         }
-        public void Open(ref TextBox sender, Model_notebook model)
+        public void Open(TextBox sender  )
         {
 
             if (sender.Text != "")
@@ -59,8 +60,8 @@ namespace kuku.View
                     dialog.Filter = "TXT|*.txt";
                     if (dialog.ShowDialog() == DialogResult.OK)
                     {
-                        model.path = dialog.FileName;
-                        sender.Text = File.ReadAllText(model.path);
+                        Model_notebook.path = dialog.FileName;
+                        sender.Text = File.ReadAllText(Model_notebook.path);
                     }
                 }
             }
@@ -70,42 +71,42 @@ namespace kuku.View
                 dialog.Filter = "TXT|*.txt";
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    model.path = dialog.FileName;
-                    sender.Text = File.ReadAllText(model.path);
+                    Model_notebook.path = dialog.FileName;
+                    sender.Text = File.ReadAllText(Model_notebook.path);
                 }
             }
         }
-        public void Save(ref TextBox sender, Model_notebook model)
+        public void Save(TextBox sender )
         {
 
-            if (model.path == "")
+            if (Model_notebook.path == "")
             {
                 SaveFileDialog dialog = new SaveFileDialog();
                 dialog.Filter = "TXT|*.txt";
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    model.path = dialog.FileName;
-                    File.WriteAllText(model.path, sender.Text);
+                    Model_notebook.path = dialog.FileName;
+                    File.WriteAllText(Model_notebook.path, sender.Text);
                 }
             }
             else
-                File.WriteAllText(model.path, sender.Text);
+                File.WriteAllText(Model_notebook.path, sender.Text);
         }
-        public void SaveAs(ref TextBox sender, Model_notebook model)
+        public void SaveAs(TextBox sender )
         {
 
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "TXT|*.txt";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                model.path = dialog.FileName;
-                File.WriteAllText(model.path, sender.Text);
+                Model_notebook.path = dialog.FileName;
+                File.WriteAllText(Model_notebook.path, sender.Text);
             }
         }
         public void NewWindow() => new Form1().Show();
-        public void Undo(ref TextBox sender, Model_notebook model) => sender.Undo();
-        public void Cut(ref TextBox sender, Model_notebook model) => sender.Cut();
-        public void Copy(ref TextBox sender, Model_notebook model) => sender.Copy();
-        public void Paste(ref TextBox sender, Model_notebook model) => sender.Paste();
+        public void Undo(TextBox sender  ) => sender.Undo();
+        public void Cut(TextBox sender ) => sender.Cut();
+        public void Copy(TextBox sender ) => sender.Copy();
+        public void Paste(TextBox sender ) => sender.Paste();
     }
 }

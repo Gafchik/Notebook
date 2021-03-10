@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace kuku.Model
 {
-    public class Model_notebook
+    public static class Model_notebook
     {
-        public string path { get; set; }
-        public List<string> text { get; set; }
-        public Model_notebook() { path = ""; }
+        public static string path { get; set; }
+        public static List<string> text { get; set; }
+         static Model_notebook() { path = ""; }
     }
 
 }
