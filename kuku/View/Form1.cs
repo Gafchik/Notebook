@@ -69,7 +69,8 @@ namespace kuku
         private void Data_timeToolStripMenuItem_Click(object sender, EventArgs e) => control.Data_time(textBox);
         private void findToolStripMenuItem_Click(object sender, EventArgs e) => control.find(textBox);
 
-        
+        private void F3ToolStripMenuItem_Click(object sender, EventArgs e) => control.F3(textBox);
+     
     }
 }
 

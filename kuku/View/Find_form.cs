@@ -18,7 +18,11 @@ namespace kuku.View
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) => Model_notebook.finder = textBox1.Text;
+        private void button1_Click(object sender, EventArgs e)
+        { 
+            Model_notebook.finder = textBox1.Text;
+            this.Close();
+        }
        
     }
 }

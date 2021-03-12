@@ -41,5 +41,7 @@ namespace kuku
 
         internal void find(TextBox sender)=> comand.find(sender);
 
+        internal void F3(TextBox sender) => comand.F3(sender);
+        
     }
 }

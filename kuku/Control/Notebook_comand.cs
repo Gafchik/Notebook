@@ -11,7 +11,7 @@ using kuku.Model;
 namespace kuku.View
 {
     public class Notebook_comand
-    {
+    {       
         public void Create(TextBox sender)
         {
             TextBox textBox = sender;
@@ -46,16 +46,43 @@ namespace kuku.View
             sender.Focus();
         }
 
+        internal void F3(TextBox sender)
+        {
+            if (Model_notebook.finder != "")
+            {
+                try
+                {
+                    
+                    int i = sender.Text.IndexOf(Model_notebook.finder);
+                    sender.SelectionStart = i;
+                    sender.SelectionLength = Model_notebook.finder.Length;
+                    sender.Focus();
+                }
+                catch (ArgumentNullException)
+                {
+                    MessageBox.Show("ничего не найдено", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         internal void find(TextBox sender)
         {
+           
             Find_form f =new Find_form();
             f.ShowDialog();
             if (Model_notebook.finder != "")
             {
-                int i = sender.Text.IndexOf(Model_notebook.finder);
-                sender.SelectionStart = i;
-                sender.SelectionLength = sender.Text.Length;
-                sender.Focus();
+                try
+                {
+                    int i = sender.Text.IndexOf(Model_notebook.finder);
+                    sender.SelectionStart = i;
+                    sender.SelectionLength = Model_notebook.finder.Length;
+                    sender.Focus();
+                }
+                catch (ArgumentNullException)
+                {
+                    MessageBox.Show("ничего не найдено", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
