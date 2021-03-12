@@ -52,17 +52,21 @@ namespace kuku.View
             {
                 try
                 {
-                    
-                    int i = sender.Text.IndexOf(Model_notebook.finder);
+                   
+                    int i = sender.Text.IndexOf(Model_notebook.finder, sender.SelectionStart + Model_notebook.finder.Length);
+                    /*if (i == -1)
+                        throw ArgumentNullException;*/
                     sender.SelectionStart = i;
                     sender.SelectionLength = Model_notebook.finder.Length;
                     sender.Focus();
                 }
-                catch (ArgumentNullException)
+                catch (Exception)
                 {
                     MessageBox.Show("ничего не найдено", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else
+                MessageBox.Show("нечего искать нажмите 'Ctrl+f' и введите искомую строку", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         internal void find(TextBox sender)
