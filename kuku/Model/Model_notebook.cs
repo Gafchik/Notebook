@@ -9,6 +9,7 @@ namespace kuku.Model
     public static class Model_notebook
     {
         public static string finder { get; set; }
+        public static string replace { get; set; }
         public static string path { get; set; }
         public static string text { get; set; }
        // public static List<string> text { get; set; }

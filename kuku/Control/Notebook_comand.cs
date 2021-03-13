@@ -67,6 +67,31 @@ namespace kuku.View
                 MessageBox.Show("нечего искать нажмите 'Ctrl+f' и введите искомую строку", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        internal void Replace(TextBox sender)
+        {
+            Form_replace f = new Form_replace();
+            f.ShowDialog();
+            if (Model_notebook.finder != "")
+            {
+                try
+                {
+
+                    int i = sender.Text.IndexOf(Model_notebook.finder);
+                    sender.SelectionStart = i;
+                    sender.SelectionLength = Model_notebook.finder.Length;
+                    sender.Focus();
+                    sender.Paste(Model_notebook.replace);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ничего не найдено", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show("нечего искать нажмите 'Ctrl+f' и введите искомую строку", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
         internal void F3_back(TextBox sender)
         {
             /*if (Model_notebook.finder != "")

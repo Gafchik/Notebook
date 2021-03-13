@@ -50,6 +50,7 @@ namespace kuku.View
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(240, 20);
             this.textBox1.TabIndex = 1;
+
             // 
             // label1
             // 
@@ -59,6 +60,7 @@ namespace kuku.View
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Что :";
+
             // 
             // Find_form
             // 

@@ -11,19 +11,24 @@ using System.Windows.Forms;
 
 namespace kuku.View
 {
-    public partial class Find_form : Form
+    public partial class Form_replace : Form
     {
-        public Find_form()
+        public Form_replace()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
             Model_notebook.finder = textBox1.Text;
             this.Close();
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Model_notebook.finder = textBox1.Text;
+            Model_notebook.replace = textBox2.Text;
+            this.Close();
+        }
     }
 }
