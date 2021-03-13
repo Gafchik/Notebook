@@ -53,9 +53,7 @@ namespace kuku.View
                 try
                 {
                    
-                    int i = sender.Text.IndexOf(Model_notebook.finder, sender.SelectionStart + Model_notebook.finder.Length);
-                    /*if (i == -1)
-                        throw ArgumentNullException;*/
+                    int i = sender.Text.IndexOf(Model_notebook.finder, sender.SelectionStart + Model_notebook.finder.Length);                  
                     sender.SelectionStart = i;
                     sender.SelectionLength = Model_notebook.finder.Length;
                     sender.Focus();
@@ -67,6 +65,27 @@ namespace kuku.View
             }
             else
                 MessageBox.Show("нечего искать нажмите 'Ctrl+f' и введите искомую строку", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        internal void F3_back(TextBox sender)
+        {
+            /*if (Model_notebook.finder != "")
+            {
+                try
+                {
+
+                    int i = sender.Text.IndexOf(Model_notebook.finder, sender.SelectionStart + Model_notebook.finder.Length);
+                    sender.SelectionStart = i;
+                    sender.SelectionLength = Model_notebook.finder.Length;
+                    sender.Focus();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ничего не найдено", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else*/
+                MessageBox.Show("Я хз как сделать в обртаку", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         internal void find(TextBox sender)

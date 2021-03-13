@@ -70,6 +70,7 @@ namespace kuku
         private void findToolStripMenuItem_Click(object sender, EventArgs e) => control.find(textBox);
 
         private void F3ToolStripMenuItem_Click(object sender, EventArgs e) => control.F3(textBox);
+        private void F3_backToolStripMenuItem_Click(object sender, EventArgs e) => control.F3_back(textBox);
      
     }
 }

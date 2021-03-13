@@ -51,7 +51,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.F3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.найтиРанееToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.F3_backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.перейтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -186,7 +186,7 @@
             this.toolStripSeparator4,
             this.findToolStripMenuItem,
             this.F3ToolStripMenuItem,
-            this.найтиРанееToolStripMenuItem,
+            this.F3_backToolStripMenuItem,
             this.заменитьToolStripMenuItem,
             this.перейтиToolStripMenuItem,
             this.toolStripSeparator5,
@@ -266,12 +266,13 @@
             this.F3ToolStripMenuItem.Text = "Найти далее";
             this.F3ToolStripMenuItem.Click += new System.EventHandler(this.F3ToolStripMenuItem_Click);
             // 
-            // найтиРанееToolStripMenuItem
+            // F3_backToolStripMenuItem
             // 
-            this.найтиРанееToolStripMenuItem.Name = "найтиРанееToolStripMenuItem";
-            this.найтиРанееToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F3)));
-            this.найтиРанееToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.найтиРанееToolStripMenuItem.Text = "Найти ранее";
+            this.F3_backToolStripMenuItem.Name = "F3_backToolStripMenuItem";
+            this.F3_backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F3)));
+            this.F3_backToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.F3_backToolStripMenuItem.Text = "Найти ранее";
+            this.F3_backToolStripMenuItem.Click += new System.EventHandler(this.F3_backToolStripMenuItem_Click);
             // 
             // заменитьToolStripMenuItem
             // 
@@ -426,7 +427,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem F3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem найтиРанееToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem F3_backToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem заменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem перейтиToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
